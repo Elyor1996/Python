@@ -25,4 +25,3 @@ for i in n:
     s = s + int(i)
 print(s)
 
-print('hello world')
