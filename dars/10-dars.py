@@ -35,5 +35,3 @@ while True:
     else:
         print('Enter again!')
         a = input()
-    
-
