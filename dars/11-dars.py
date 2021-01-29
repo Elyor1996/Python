@@ -34,20 +34,20 @@ chiziq.goto(300,300)
 
 koptok = Turtle()
 koptok.color('green')
-koptok.shape('square')
+koptok.shape('circle')
 koptok.up()
 koptok.goto(0, 0)
-koptok.onkey(oyna.setheading(90), 'up')
-koptok.onkey(oyna.setheading(270), 'down')
-koptok.onkey(oyna.setheading(180), 'left')
-koptok.onkey(oyna.setheading(0), 'right')
+# koptok.onkey(lambda:oyna.setheading(90), 'up')
+# koptok.onkey(lambda:oyna.setheading(270), 'down')
+# koptok.onkey(lambda:oyna.setheading(180), 'left')
+# koptok.onkey(lambda:oyna.setheading(0), 'right')
 
 panel.up()
-panel.goto(50,-300)
+panel.goto(150,-300)
 panel.down()
-panel.goto(50, -260)
-panel.goto(-50,-260)
-panel.goto(-50,-300)
+panel.goto(150, -260)
+panel.goto(0,-260)
+panel.goto(0,-300)
 panel.hideturtle()
 step_x = 3
 step_y = 2
@@ -57,7 +57,8 @@ while True:
         step_x = -step_x
     if y + step_y >= 300 or y + step_y <= -300:
         step_y = -step_y
-    
+    if y + step_y == -260:
+        break
 
     koptok.goto(x+step_x, y+step_y)
 
