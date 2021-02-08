@@ -26,14 +26,21 @@
 # 12- topshiriq
 
 import pygal
-
+def list_str_to_int(l):
+    k = []
+    for item in l:
+        k.append(int(item))
+    return k
 first = input('ijtimoiy tarmoq nomini kiriting: ')
 first_list = list(input(f'{first}ning 3 ta qiymatini kiriting'))
+first_list = list_str_to_int(first_list)
 second = input('ijtimoiy tarmoq nomini kiriting: ')
 second_list = list(input(f'{second}ning 3 ta qiymatini kiriting'))
+second_list = list_str_to_int(second_list)
 third = input('ijtimoiy tarmoq nomini kiriting: ')
 third_list = list(input(f'{third}ning 3 ta qiymatini kiriting'))
-
+third_list = list_str_to_int(third_list)
+print(type(first_list))
 line_chart = pygal.Line()
 line_chart.title = 'Statistika'
 line_chart.x_labels = ['yanvar','fevral','mart']
