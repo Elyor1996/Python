@@ -1,4 +1,5 @@
-proper = input('enter the name of country: ')
+proper = input('enter the language: ').lower()
+br = True
 country = {
   "AD": {
     "name": "Andorra",
@@ -2868,8 +2869,8 @@ country = {
     ]
   }
 }
-result = country.get(proper, False)
-if result:
-    print(result['languages']) 
-else:
-    print('this information not found')
+for x in country:
+    til = country[x]['languages']
+    if proper in til:
+        print(country[x]['name'])
+#print('this information not found')
